@@ -5,7 +5,7 @@ services:
     image: postgres:latest
     container_name: postgres
     environment:
-      POSTGRES_DB: bachelorapi
+      POSTGRES_DB: contestant
       POSTGRES_USER: melisssasantos
       POSTGRES_PASSWORD: password
     ports:
@@ -15,14 +15,14 @@ services:
 
   app:
     image: bachelorapi:latest
-    container_name: bachelorapi
+    container_name: contestant
     build:
       context: .
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/bachelorapi
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/contestant
       SPRING_DATASOURCE_USERNAME: melissasantos
       SPRING_DATASOURCE_PASSWORD: password
       SPRING_JPA_HIBERNATE_DDL_AUTO: update
