@@ -20,4 +20,13 @@ public class ContestantController {
         return contestantRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Contestant> getContestantById(@PathVariable Long id) {
+        return contestantRepository.findById(id)
+                .map(contestant -> ResponseEntity.ok().body(contestant))
+                .orElse(ResponseEntity.notFound().build());
+
+    }
+
+
 }
