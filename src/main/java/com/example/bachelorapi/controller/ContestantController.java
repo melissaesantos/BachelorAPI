@@ -53,4 +53,5 @@ public class ContestantController {
                     return ResponseEntity.ok().build();
                 }).orElse(ResponseEntity.notFound().build());
     }
+    //i can add more getmapping by city and state
 }
