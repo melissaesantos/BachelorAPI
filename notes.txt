@@ -1,0 +1,3 @@
+to see which databases you have do \l
+thsi is how you connect:
+docker exec -it bachelorapi_postgres bash
