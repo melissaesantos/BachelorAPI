@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/contestants")
+@RequestMapping("api/v1/contestants")
 public class ContestantController {
     @Autowired
     //allows the controller to use the repository for CRUD operations on the 'Contestant' entity
