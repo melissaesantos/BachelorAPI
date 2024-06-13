@@ -1,6 +1,9 @@
+server:
+  port: 8080
+
 spring:
   datasource:
-    url: jdbc:postgresql://postgres:5432/contestant
+    url: jdbc:postgresql://postgres:5432/bachelorapi
     username: melissasantos
     password: password
     driver-class-name: org.postgresql.Driver

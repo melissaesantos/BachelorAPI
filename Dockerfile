@@ -1,4 +1,7 @@
-FROM ubuntu:latest
-LABEL authors="melissasantos"
+FROM openjdk:11-jre-slim
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY ./target/bachelorapi.jar ./app.jar
+
+CMD ["java", "-jar", "app.jar"]
