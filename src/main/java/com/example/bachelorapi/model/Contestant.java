@@ -15,7 +15,7 @@ public class Contestant {
     private Long id;
     private String name;
     private int age;
-    private String Occupation;
+    private String occupation;
     private String season;
 
     //constructors + getters + setters
@@ -26,7 +26,7 @@ public class Contestant {
     public Contestant(String name, int age, String occupation, String season) {
         this.name = name;
         this.age = age;
-        this.Occupation = occupation;
+        this.occupation = occupation;
         this.season = season;
     }
 
@@ -50,10 +50,10 @@ public class Contestant {
         this.age = age;
     }
     public String getOccupation() {
-        return Occupation;
+        return occupation;
     }
     public void setOccupation(String occupation) {
-        Occupation = occupation;
+        occupation = occupation;
     }
     public String getSeason() {
         return season;

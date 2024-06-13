@@ -15,8 +15,6 @@ public class ContestantController {
     @Autowired
     //allows the controller to use the repository for CRUD operations on the 'Contestant' entity
     private ContestantRepository contestantRepository;
-    @Autowired
-    private JsonComponentModule jsonComponentModule;
 
     @GetMapping
     public List<Contestant> getAllContestants() {

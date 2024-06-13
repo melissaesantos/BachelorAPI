@@ -1,7 +1,7 @@
-FROM openjdk:11-jre-slim
+FROM openjdk:17-jdk-slim
 
 WORKDIR /app
 
-COPY ./target/bachelorapi.jar ./app.jar
+COPY build/libs/*.jar app.jar
 
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
