@@ -49,5 +49,15 @@ public class ContestantController {
                 }).orElse(ResponseEntity.notFound().build());
     }
 
+    @DeleteMapping("/{id}")
+
+    public ResponseEntity<?> deleteContestant(@PathVariable Long id) {
+        return contestantRepository.findById(id)
+                .map(contestant -> {
+                    contestantRepository.delete(contestant);
+                    return ResponseEntity.ok().build();
+                }).orElse(ResponseEntity.notFound().build());
+    }
+
 
 }
