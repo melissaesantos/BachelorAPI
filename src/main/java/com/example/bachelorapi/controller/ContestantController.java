@@ -3,17 +3,16 @@ package com.example.bachelorapi.controller;
 import com.example.bachelorapi.model.Contestant;
 import com.example.bachelorapi.repository.ContestantRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.jackson.JsonComponentModule;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("api/v1/contestants")
+@RequestMapping("/api/v1/contestants")
 public class ContestantController {
+
     @Autowired
-    //allows the controller to use the repository for CRUD operations on the 'Contestant' entity
     private ContestantRepository contestantRepository;
 
     @GetMapping
@@ -26,16 +25,15 @@ public class ContestantController {
         return contestantRepository.findById(id)
                 .map(contestant -> ResponseEntity.ok().body(contestant))
                 .orElse(ResponseEntity.notFound().build());
-
     }
 
-    @PostMapping("/{id}")
+    @PostMapping
     public Contestant createContestant(@RequestBody Contestant contestant) {
         return contestantRepository.save(contestant);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Contestant> updateContestant(@PathVariable Long id, @RequestBody Contestant contestantDetails){
+    public ResponseEntity<Contestant> updateContestant(@PathVariable Long id, @RequestBody Contestant contestantDetails) {
         return contestantRepository.findById(id)
                 .map(contestant -> {
                     contestant.setName(contestantDetails.getName());
@@ -48,7 +46,6 @@ public class ContestantController {
     }
 
     @DeleteMapping("/{id}")
-
     public ResponseEntity<?> deleteContestant(@PathVariable Long id) {
         return contestantRepository.findById(id)
                 .map(contestant -> {
@@ -56,6 +53,4 @@ public class ContestantController {
                     return ResponseEntity.ok().build();
                 }).orElse(ResponseEntity.notFound().build());
     }
-
-
 }
