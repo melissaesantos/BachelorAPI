@@ -15,4 +15,9 @@ public class ContestantController {
     //allows the controller to use the repository for CRUD operations on the 'Contestant' entity
     private ContestantRepository contestantRepository;
 
+    @GetMapping
+    public List<Contestant> getAllContestants() {
+        return contestantRepository.findAll();
+    }
+
 }
