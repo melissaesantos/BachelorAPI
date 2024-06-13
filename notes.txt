@@ -1,3 +1,14 @@
 to see which databases you have do \l
 thsi is how you connect:
 docker exec -it bachelorapi_postgres bash
+
+
+adding contestants:
+{
+  "name": "Allison",
+  "age": 26,
+  "occupation": "Realtor/Lauren's Sister",
+  "season": "Season 28"
+  "city" : "Philadelphia"
+  "state"
+}
