@@ -28,5 +28,10 @@ public class ContestantController {
 
     }
 
+    @PostMapping("/{id}")
+    public Contestant createContestant(@RequestBody Contestant contestant) {
+        return contestantRepository.save(contestant);
+    }
+
 
 }
