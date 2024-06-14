@@ -1,7 +1,7 @@
 to see which databases you have do \l
 thsi is how you connect:
 docker exec -it bachelorapi_postgres bash
-
+http://localhost:8080/api/v1/contestants
 
 adding contestants:
 {
