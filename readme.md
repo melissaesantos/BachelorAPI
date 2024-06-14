@@ -33,3 +33,8 @@ You need to have the following software installed on your machine:
    ```sh
    git clone https://github.com/your-username/bachelor-api.git
    cd bachelor-api
+2. **build the project using Maven:**
+   ```sh
+   mvn clean package    
+4. ewf
+5.  
