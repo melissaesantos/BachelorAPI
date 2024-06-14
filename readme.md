@@ -36,5 +36,7 @@ You need to have the following software installed on your machine:
 2. **build the project using Maven:**
    ```sh
    mvn clean package    
-4. ewf
+3. **Run the application using Docker Compose:**
+   ```sh
+   docker-compose up --build
 5.  
