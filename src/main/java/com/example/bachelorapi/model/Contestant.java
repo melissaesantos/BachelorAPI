@@ -57,7 +57,7 @@ public class Contestant {
         return occupation;
     }
     public void setOccupation(String occupation) {
-        occupation = occupation;
+        this.occupation = occupation;
     }
     public String getSeason() {
         return season;

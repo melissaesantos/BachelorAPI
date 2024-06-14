@@ -8,7 +8,7 @@ adding contestants:
   "name": "Allison",
   "age": 26,
   "occupation": "Realtor/Lauren's Sister",
-  "season": "Season 28"
-  "city" : "Philadelphia"
-  "state"
+  "season": "Season 28",
+  "city": "Philadelphia",
+  "state": "PA"
 }
