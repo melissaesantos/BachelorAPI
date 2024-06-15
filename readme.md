@@ -39,4 +39,9 @@ You need to have the following software installed on your machine:
 3. **Run the application using Docker Compose:**
    ```sh
    docker-compose up --build
-5.  
+## Running the Application
+
+After running docker-compose up --build, the application will be available at http://localhost:8080.
+
+## API Endpoints
+### Contest Management
